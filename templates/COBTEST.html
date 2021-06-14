@@ -1,0 +1,369 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<title>
+    COB
+</title>
+<meta charset="UTF-6">
+<meta name="Viewport" content="width=device, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'css/COBTESTECSS.css' %}" />
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+
+<body>
+
+
+<header class="cabecalho"> 
+
+    <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+<div class="Logo"><img src="{% static 'img/logoseinfra.png' %}" alt="Logo SEIFRA"></div>
+<ul>
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Serviços</a>
+        <!-- <li><a href="#"><input type="file"></a>Carregar arquivo</li> -->
+    </li>
+    <li><a href="footer">Contato</a></li>
+</ul>
+</nav>
+
+
+
+
+</header>
+
+
+<section class="container">
+    <form>
+    <div class="conteudo"> <!--area para a pesquisa-->
+        <fieldset>
+            <legend>Pesquisa:</legend> <!--Querendo colocar esse para preencher-->
+        <div class="DIA">
+            Data: <input type="month">
+        </div>
+
+        <div class="seletor">
+            <label for="name">Fonte</label>
+            <div class="fonte">
+
+           <select>
+            <option selected="selected" value="1">SCO</option>
+            <option value="2">EMOP</option>
+            <option value="3">SINAPI</option>  <!--Checkbox Fonte-->
+            </select>
+            </div>
+
+            <label for="name">Categoria</label>
+            <div class="Categoria">
+
+            <select>
+            <option selected="selected" 
+            value="testestestetetewtest">
+            testestefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffst
+            </option>
+            <option value="2">No</option>  <!--Checkbox categoria-->
+            </select>
+
+            </div>
+            <label for="name">Cla</label>
+            <div class="Cla">
+
+                <select>
+            <option selected="selected" value="1">Yes</option>
+            <option value="2">No</option>  <!--Checkbox Cla-->
+            </select>
+
+            </div>
+            <label for="name">Familia</label>
+
+            <div class="Familia">
+
+                <select>
+            <option selected="selected" value="1">Yes</option>
+            <option value="2">No</option>  <!--Checkbox Familia-->
+            </select>
+            </div>
+            <label for="name">Item</label>
+
+            <div class="Item">
+
+             <select>
+            <option selected="selected" value="1">Yes</option>
+            <option value="2">No</option>  <!--Checkbox item-->
+            </select>
+            </div>
+        <input type="radio" name="desonerado" value="Desonerado">Desonerado
+        <input type="radio" name="desonerado" value="Onerado">Onerado
+        </div>
+        <Button>Pesquisar</Button>
+        <fieldset>
+            <legend>Pesquisa por codigo/Palavra-chave: </legend>
+        <div class="pesquisacodigo">
+
+            <label for="name">Codigo/Palavra-chave: </label>
+            <input type="text">
+            <Button>Pesquisar</Button>    
+        </div>
+        </fieldset>
+
+    </fieldset>
+    </form>
+
+    </div>
+
+    <!--fim area para a pesquisa-->
+    <br></br>
+    <div class="tabela_pesquisa">
+
+        <fieldset>
+            <legend>Tabela pesquisa:</legend> <!--Querendo colocar esse para preencher-->
+        <table class="pesquisa"> <!--Tabela pesquisa-->
+                <thead>
+                <tr>
+                <th>Fonte</th>
+                <th>Codigo</th>
+                <th>Descricao</th>
+                <th>Unidade</th>
+                <th>Preco</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>cell1_1</td>
+                <td>cell2_1</td>
+                <td>cell3_1</td>
+                <td>cell4_1</td>
+                <td>cell5_1</td>
+                </tr>
+                <tr>
+                <td>cell1_2</td>
+                <td>cell2_2</td>
+                <td>cell3_2</td>
+                <td>cell4_2</td>
+                <td>cell5_2</td>
+                </tr>
+                <tr>
+                <td>cell1_3</td>
+                <td>cell2_3</td>
+                <td>cell3_3</td>
+                <td>cell4_3</td>
+                <td>cell5_3</td>
+                </tr>
+                <tr>
+                <td>cell1_4</td>
+                <td>cell2_4</td>
+                <td>cell3_4</td>
+                <td>cell4_4</td>
+                <td>cell5_4</td>
+                </tr>
+                </tbody>
+                </table>
+
+        <Button>Inserir</Button>            
+    </fieldset>
+    </div>
+    <!--fim Tabela pesquisa-->
+    
+        <br></br>
+    <div class="area_time"> <!--Area para informações sobre a obra-->
+        <fieldset>
+            <legend>Dados obras:</legend>
+        <div class="formm"><form>
+            <fieldset>
+                <legend>Local:</legend> <!--Querendo colocar esse para preencher-->
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Obra:</legend>
+                <input type="text">
+            </fieldset>
+        </form>
+        </div>
+        
+       
+    </fieldset>
+    </div>
+
+   
+
+    <!--fim Area para informações sobre a obra-->
+
+
+
+     <!--Querendo colocar esse para preencher-->
+    <div class="tabela_orcamento">
+        <br></br>    
+        <fieldset>
+            <legend>Tabela Orcamento:</legend>
+        <table class="Orcamento"> <!--Tabela Orcamento-->
+                <thead>
+                <tr>
+                <th>Fonte</th>
+                <th>Codigo</th>
+                <th>Descricao</th>
+                <th>Unidade</th>
+                <th>Preco unitario</th>
+                <th>Quantidade</th>
+                <th>Preco</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                <td>BDI</td>
+                <td><div contenteditable></div></td>
+                </tr>
+                <tr>
+                <td>total</td>
+                <td><div contenteditable></div></td>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                <td>cell1_1</td>
+                <td>cell2_1</td>
+                <td>cell3_1</td>
+                <td>cell4_1</td>
+                <td>cell5_1</td>
+                <td><div contenteditable> </div></td>
+                <td>cell7_1</td>
+                </tr>
+                <tr>
+                <td>cell1_2</td>
+                <td>cell2_2</td>
+                <td>cell3_2</td>
+                <td>cell4_2</td>
+                <td>cell5_2</td>
+                <td><div contenteditable></div></td>
+                <td>cell7_2</td>
+                </tr>
+                <tr>
+                <td>cell1_3</td>
+                <td>cell2_3</td>
+                <td>cell3_3</td>
+                <td>cell4_3</td>
+                <td>cell5_3</td>
+                <td><div contenteditable></div></td>
+                <td>cell7_3</td>
+                </tr>
+                <tr>
+                <td>cell1_4</td>
+                <td>cell2_4</td>
+                <td>cell3_4</td>
+                <td>cell4_4</td>
+                <td>cell5_4</td>
+                <td><div contenteditable></div></td>
+                <td>cell7_4</td>
+                </tr>
+                </tbody>
+                </table>
+            </fieldset>
+    </div>
+    <!--fim Tabela Orcamento-->
+
+
+
+    <div class="Botoesfinais"><!--Botoes finais-->
+
+            <div class="Excluirorcamento">
+
+                <Button>Excluir Tabela</Button>
+            </div>
+            
+            <div class="reset">
+                <Button>Resetar</Button>
+            </div>
+            <div class="Excluir_item">
+                <Button>Excluir item</Button>
+            </div>    
+            <div class="Salvar">
+                <Button>Salvar</Button>
+            </div>
+    </div>        <!--fim Botoes finais-->
+
+</section>
+
+<footer> 
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text"><span>Seinfra</span>RJ</h1>
+                <p>
+                    Secretaria de Estado de Infraestrutura e Obras - SEINFRA
+                    Nome do órgão: Secretaria de Estado de Infraestrutura e Obras - SEINFRA
+                    Endereço: Campo de São Cristóvão, 138, São Cristóvão, Rio de Janeiro - CEP: 20921-904
+                    Horário: Segunda à Sexta, das 9h às 18h.
+                </p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone">
+                        </i>&nbsp; (21) 2517-4900</span>
+                        <span><i class="fas fa-envelope">
+                        </i>&nbsp;gabinete@obras.rj.gov.br</span>
+                    </div>
+
+                 <div class="socials">
+                    <a href="https://www.facebook.com/SEINFRARJ/" 
+                    target="_blank" 
+                    rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/seinfrarj/" 
+                    target="_blank" 
+                    rel="noopener"><i class="fab fa-instagram"></i></a>
+
+                 </div>   
+
+                </div>   
+  
+                    
+
+            <div class="footer-section links">
+
+                <h2>Links</h2>
+                <br></br>
+                <a class="link_footer" 
+                href="http://www.ioerj.com.br/portal/modules/content/index.php?id=21" 
+                target="_blank" rel="noopener"><li>Diario Oficial</li></a>
+                <a class="link_footer" 
+                href="http://www.emop.rj.gov.br/" 
+                target="_blank" rel="noopener"><li>EMOP</li></a>
+                <a class="link_footer" 
+                href="http://www2.rio.rj.gov.br/sco/" 
+                target="_blank" rel="noopener"><li>SCO</li></a>
+                <a class="link_footer" 
+                href="https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/Paginas/default.aspx" 
+                target="_blank" rel="noopener"><li>CAIXA FEDERAL</li></a>
+            
+
+
+            <!-- </div>
+            <div class="footer-section contact-form">
+                <h2>Contatos</h2>
+                <br>
+                <form action="index.html" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="gabinete@obras.rj.gov.br">
+
+                </form>
+
+
+            </div> -->
+
+
+        </div>
+    
+    <div class="footer-bottom">
+        &copy; SEINFRA / Governo do Estado Rio de Janeiro
+
+    </div>
+    </div>
+
+</footer>
+</body>
+
+</html>

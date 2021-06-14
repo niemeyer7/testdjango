@@ -1,0 +1,348 @@
+*{box-sizing: border-box;overflow: auto;font-size: 100%;
+border-radius: 10px;}
+
+html, 
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #f6f6f6;
+
+}
+
+.section {
+
+  min-height: 100%;
+}
+
+/* .cabecalho {
+  background: #333;
+    border-bottom: 1px solid #444;
+    max-height: 60px;
+    position: relative;
+    z-index: 22;
+    display: block;
+} */
+
+/* ul.dropdown-menu {
+  position: static;
+  top: initial;
+  left: initial;
+  z-index: initial;
+  display: block;
+  min-width: 0;
+  font-size: inherit;
+  color: initial;
+  text-align: initial;
+  background-color: transparent;
+  background-clip: initial;
+  border: none;
+  border-radius: 0;
+} */
+
+nav {
+  background: #0B6FA4;
+  height: 170px;
+  width: 100%;
+}
+
+nav ul { 
+
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+img {
+  max-width: 235px;
+  max-height: 166px;
+  width: auto;
+  height: auto;
+}
+
+nav ul li a{
+
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active, a:hover {
+
+  background: #0b9fa4;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #FFFFFF;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+
+
+.link_footer {
+  color: white;
+    
+} 
+
+
+fieldset { 
+  font-weight: bold;
+}
+/* Grid para arrumar o layout da pagina */
+
+.container {
+display: grid;
+  /* grid-template-columns: 0.9fr 1.1fr 1fr 1fr; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  gap: 0px 0px;
+  grid-template-areas:
+    "conteudo tabela_pesquisa tabela_pesquisa tabela_pesquisa"
+    "conteudo tabela_pesquisa tabela_pesquisa tabela_pesquisa"
+    "area_time tabela_pesquisa tabela_pesquisa tabela_pesquisa"
+    "tabela_orcamento tabela_orcamento tabela_orcamento tabela_orcamento"
+    "Botoesfinais Botoesfinais Botoesfinais Botoesfinais";
+    padding: 42px 55px 45px;
+} 
+
+
+.conteudos { grid-area: conteudos; }
+.tabela_pesquisa { grid-area: tabela_pesquisa; }
+.tabela_orcamento { grid-area: tabela_orcamento; }
+.area_time { grid-area: area_time; }
+.Botoesfinais { grid-area: Botoesfinais; }
+
+/* Tabela Geral*/
+
+
+table {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 2px;
+}
+table tbody td {
+  font-size: 13px;
+}
+table tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table thead {
+  background: #0B6FA4;
+  border-bottom: 5px solid #FFFFFF;
+}
+table thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+table tfoot td {
+  font-size: 14px;
+}
+
+
+
+/* Area para informções sobre as obras */
+.area_time {
+    min-width: 20%;
+    max-width: 50%;
+}
+
+/* Area para selecionar as informações dos catalagos */
+
+.conteudo {
+
+    
+    min-width:  100px; 
+    max-width: 95%;
+}
+
+@media  (max-width: 952px) {
+
+    nav ul li a {
+      font-size: 16px;
+    }
+    .container {
+    
+        display: grid;
+        grid-template-areas: 
+        "conteudo "
+        "tabela_pesquisa "
+        "area_time "
+        "tabela_orcamento "
+        "Botoesfinais";
+        
+    }
+}
+
+@media  (max-width: 858px) {
+
+  .checkbtn {
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #0B6FA4;
+		top: 140px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 35px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	a:hover, a.active {
+		background: none;
+		color: #0B6FA4;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+
+  .container {
+  
+      display: grid;
+      grid-template-areas: 
+      "conteudo "
+      "tabela_pesquisa "
+      "area_time "
+      "tabela_orcamento "
+      "Botoesfinais" ;
+      
+  }
+}
+
+.tabela_pesquisa {
+
+  position: relative;
+  width: 100%;
+
+}
+
+.tabela_orcamento {
+  position: relative;
+  width: 100%;
+}
+
+form{ 
+  width: auto;
+}
+
+
+
+
+
+/* .Salvar {
+
+  position:relative;
+  left: 90%;
+}
+
+.Excluir_item { 
+
+  position: relative;
+  left: 60%;
+} */
+
+/* Grid para arrumar os botoes */
+
+.Botoesfinais {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Excluirorcamento reset Excluir_item salvar"
+    ". . . .";
+  padding: 42px 55px 45px;
+  /* justify-content: center;
+  -webkit-box-pack: center; */
+}
+
+.excluir-1 { grid-area: Excluir_item; }
+.excluir-tudo { grid-area: Excluirorcamento; }
+.resetar { grid-area: reset; }
+.salvar { grid-area: salvar; }
+
+.area_time {
+  display: grid;
+ 
+  gap: 0px 0px;
+  grid-template-areas:
+   "area_time ."
+   "area_time .";
+
+}
+
+
+.footer {
+  background: #0B6FA4;
+  color: #FFFFFF; 
+  height: 400px;
+  position: relative;
+}
+
+.footer .footer-content {
+  border-color: #a40b0b;
+  height: 350px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+
+}
+
+.footer .footer-bottom {
+  background: #0b48a4;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+}
