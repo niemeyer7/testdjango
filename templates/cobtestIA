@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COB</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/COBTESTECSS.css' %}" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+                <img src="{% static 'img/logoseinfra.png' %}" alt="Logo SEIFRA">
+            </div>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#footer">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <form>
+            <div class="conteudo">
+                <fieldset>
+                    <legend>Pesquisa:</legend>
+                    <div class="DIA">
+                        Data: <input type="month">
+                    </div>
+
+                    <div class="seletor">
+                        <label for="fonte">Fonte</label>
+                        <select id="fonte">
+                            <option selected="selected" value="1">SCO</option>
+                            <option value="2">EMOP</option>
+                            <option value="3">SINAPI</option>
+                        </select>
+
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria">
+                            <option selected="selected" value="1">Categoria 1</option>
+                            <option value="2">Categoria 2</option>
+                        </select>
+
+                        <label for="cla">Cla</label>
+                        <select id="cla">
+                            <option selected="selected" value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+
+                        <label for="familia">Familia</label>
+                        <select id="familia">
+                            <option selected="selected" value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+
+                        <label for="item">Item</label>
+                        <select id="item">
+                            <option selected="selected" value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+
+                        <div class="radio-options">
+                            <input type="radio" id="desonerado" name="oneracao" value="Desonerado">
+                            <label for="desonerado">Desonerado</label>
+                            <input type="radio" id="onerado" name="oneracao" value="Onerado">
+                            <label for="onerado">Onerado</label>
+                        </div>
+                    </div>
+                    <button type="submit">Pesquisar</button>
+
+                    <fieldset>
+                        <legend>Pesquisa por código/Palavra-chave: </legend>
+                        <div class="pesquisacodigo">
+                            <label for="keyword">Código/Palavra-chave: </label>
+                            <input type="text" id="keyword">
+                            <button type="submit">Pesquisar</button>
+                        </div>
+                    </fieldset>
+                </fieldset>
+            </div>
+        </form>
+
+        <div class="tabela_pesquisa">
+            <fieldset>
+                <legend>Tabela pesquisa:</legend>
+                <table class="pesquisa">
+                    <thead>
+                        <tr>
+                            <th>Fonte</th>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Unidade</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+                            <td>cell4_1</td>
+                            <td>cell5_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_2</td>
+                            <td>cell2_2</td>
+                            <td>cell3_2</td>
+                            <td>cell4_2</td>
+                            <td>cell5_2</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_3</td>
+                            <td>cell2_3</td>
+                            <td>cell3_3</td>
+                            <td>cell4_3</td>
+                            <td>cell5_3</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_4</td>
+                            <td>cell2_4</td>
+                            <td>cell3_4</td>
+                            <td>cell4_4</td>
+                            <td>cell5_4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button>Inserir</button>
+            </fieldset>
+        </div>
+
+        <div class="area_time">
+            <fieldset>
+                <legend>Dados obras:</legend>
+                <form>
+                    <fieldset>
+                        <legend>Local:</legend>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Obra:</legend>
+                        <input type="text">
+                    </fieldset>
+                </form>
+            </fieldset>
+        </div>
+
+        <div class="tabela_orcamento">
+            <fieldset>
+                <legend>Tabela Orçamento:</legend>
+                <table class="orcamento">
+                    <thead>
+                        <tr>
+                            <th>Fonte</th>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Unidade</th>
+                            <th>Preço unitário</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>BDI</td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+                            <td>cell4_1</td>
+                            <td>cell5_1</td>
+                            <td contenteditable="true"></td>
+                            <td>cell7_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_2</td>
+                            <td>cell2_2</td>
+                            <td>cell3_2</td>
+                            <td>cell4_2</td>
+                            <td>cell5_2</td>
+                            <td contenteditable="true"></td>
+                            <td>cell7_2</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_3</td>
+                            <td>cell2_3</td>
+                            <td>cell3_3</td>
+                            <td>cell4_3</td>
+                            <td>cell5_3</td>
+                            <td contenteditable="true"></td>
+                            <td>cell7_3</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_4</td>
+                            <td>cell2_4</td>
+                            <td>cell3_4</td>
+                            <td>cell4_4</td>
+                            <td>cell5_4</td>
+                            <td contenteditable="true"></td>
+                            <td>cell7_4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+
+        <div class="botoesfinais">
+            <button class="excluirorcamento">Excluir Tabela</button>
+            <button class="reset">Resetar</button>
+            <button class="excluir_item">Excluir item</button>
+            <button class="salvar">Salvar</button>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>Seinfra</span>RJ</h1>
+                    <p>
+                        Secretaria de Estado de Infraestrutura e Obras - SEINFRA<br>
+                        Nome do órgão: Secretaria de Estado de Infraestrutura e Obras - SEINFRA<br>
+                        Endereço: Campo de São Cristóvão, 138, São Cristóvão, Rio de Janeiro - CEP: 20921-904<br>
+                        Horário: Segunda à Sexta, das 9h às 18h.
+                    </p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i>&nbsp; (21) 2517-4900</span>
+                        <span><i class="fas fa-envelope"></i>&nbsp;gabinete@obras.rj.gov.br</span>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/SEINFRARJ/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/seinfrarj/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section links">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="http://www.ioerj.com.br/portal/modules/content/index.php?id=21" target="_blank" rel="noopener">Diário Oficial</a></li>
+                        <li><a href="http://www.emop.rj.gov.br/" target="_blank" rel="noopener">EMOP</a></li>
+                        <li><a href="http://www2.rio.rj.gov.br/sco/" target="_blank" rel="noopener">SCO</a></li>
+                        <li><a href="https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/Paginas/default.aspx" target="_blank" rel="noopener">CAIXA FEDERAL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; SEINFRA / Governo do Estado Rio de Janeiro
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
